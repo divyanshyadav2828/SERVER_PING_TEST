@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1770027327025,
+    "name": "SCHOOL TODAY ",
+    "ip": "SCHOOLTODAY.VIDYAGYAN.IN",
+    "ports": [],
+    "lastSeen": 1770028392446
+  },
+  {
+    "id": 1770027386158,
+    "name": "NEWS PORTAL",
+    "ip": "NEWSPORTAL.VIDYAGYAN.IN",
+    "ports": [
+      80
+    ],
+    "lastSeen": 1770028392451
+  },
+  {
+    "id": 1770027670257,
+    "name": "BOARDS",
+    "ip": "BOARDS.VIDYAGYAN.IN",
+    "ports": [],
+    "lastSeen": 1770028392412
+  },
+  {
+    "id": 1770027726499,
+    "name": "HOSTEL DORMDESK",
+    "ip": "KALAM.VIDYAGYAN.IN",
+    "ports": [
+      80
+    ],
+    "lastSeen": 1770028392451
+  },
+  {
+    "id": 1770027748527,
+    "name": "HOSTEL DORMEDESK",
+    "ip": "TERESA.VIDYAGYAN.IN",
+    "ports": [
+      80
+    ],
+    "lastSeen": 1770028392455
+  },
+  {
+    "id": 1770027769706,
+    "name": "SCHOOL INFO",
+    "ip": "INFO.VIDYAGYAN.IN",
+    "ports": [
+      80
+    ],
+    "lastSeen": 1770028392455
+  }
+]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar closed" id="sidebar">
+            <div class="logo">
+                <i data-lucide="activity"></i>
+                <span>NetMonitor Pro</span>
+            </div>
+            
+            <nav>
+                <a href="#" id="nav-dashboard" class="nav-link active" onclick="switchView('dashboard')">
+                    <i data-lucide="layout-grid"></i> Dashboard
+                </a>
+                <a href="#" id="nav-settings" class="nav-link" onclick="switchView('settings')">
+                    <i data-lucide="settings"></i> Settings
+                </a>
+            </nav>
+
+            <div class="user-profile">
+                <div class="avatar">DY</div>
+                <div class="user-info">
+                    <span class="name">Divyansh Yadav</span><br>
+                    <span class="role">Server Administrator</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <button id="sidebar-toggle" class="btn-secondary toggle-btn">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <div id="view-dashboard" class="view-section">
+                <header class="dashboard-header">
+                    <div>
+                        <h1>Dashboard Overview</h1>
+                        <p class="subtitle">Real-time infrastructure monitoring</p>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="last-updated">
+                            Updated: <span id="last-update-time">--:--:--</span>
+                        </div>
+                        <button id="refresh-btn" class="btn-secondary">
+                            <i data-lucide="refresh-cw"></i> Check Status
+                        </button>
+                    </div>
+                </header>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i data-lucide="server"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Servers</h3>
+                            <p id="total-servers">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i data-lucide="check-circle"></i></div>
+                        <div class="stat-info">
+                            <h3>Services Online</h3>
+                            <p id="online-servers">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red"><i data-lucide="alert-circle"></i></div>
+                        <div class="stat-info">
+                            <h3>Services Down</h3>
+                            <p id="offline-servers">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i data-lucide="zap"></i></div>
+                        <div class="stat-info">
+                            <h3>Avg Latency</h3>
+                            <p id="avg-latency">-- ms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Live Server Status</h2>
+                <div id="server-grid" class="server-grid">
+                    </div>
+            </div>
+
+            <div id="view-settings" class="view-section hidden">
+                <header>
+                    <h1>Server Configuration</h1>
+                    <p class="subtitle">Manage monitored endpoints</p>
+                </header>
+
+                <div class="settings-card">
+                    <h2>Add New Server</h2>
+                    <form id="add-server-form">
+                        <div class="form-group">
+                            <label>Server Name</label>
+                            <input type="text" id="input-name" placeholder="e.g. Production DB" required>
+                        </div>
+                        <div class="form-group">
+                            <label>IP Address / Hostname</label>
+                            <input type="text" id="input-ip" placeholder="e.g. 192.168.1.50" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ports (Comma separated)</label>
+                            <input type="text" id="input-ports" placeholder="e.g. 80, 443, 3306" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">
+                                <i data-lucide="plus"></i> Add Server
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
