@@ -86,7 +86,7 @@ You will see the dashboard updating in real-time with the status of your defined
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+This project is currently not accepting Pull Requests or code contributions. However, feedback and suggestions are welcome! If you find a bug or have an idea, please feel free to open an issue to let me know.
 
 ## 📄 License
 
